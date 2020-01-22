@@ -1,0 +1,31 @@
+version: "3.3"
+services:
+  web:
+    image: nginx:1.16.1-alpine
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    depends_on:
+      - php
+  php:
+    build: ./docker/php/
+#    image: php:7-fpm
+    working_dir: /var/www
+    user: "${UID}:${GID}"
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+    volumes:
+      - ./app/runtime/data:/var/lib/mysql
+    ports:
+      - "9906:${MYSQL_PORT}"
