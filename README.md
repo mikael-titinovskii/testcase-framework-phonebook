@@ -1,6 +1,6 @@
 #### phonebook api app
 
-###### Setup:
+##### Setup:
 
 Run the containers
 ```shell script
@@ -29,7 +29,7 @@ php phinx.php migrate
 # Optional: load test data
 php phinx.php seed:run
 ```
-###### Todo:
+##### Todo:
  - Change volume to add directive to remove UID:GUID hack
  - Auth middleware
  - Write tests
