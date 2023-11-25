@@ -19,9 +19,7 @@ class ExternalValidationResourcesService
     private const CC_URL_RES = 'countries';
     private const TZ_URL_BASE = 'https://api.hostaway.com/timezones';
     private const TZ_URL_RES = 'timezones';
-    /**
-     * @var FlockMutex
-     */
+
     private FlockMutex $flockMutex;
 
 

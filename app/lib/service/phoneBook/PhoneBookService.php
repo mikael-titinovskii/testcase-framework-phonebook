@@ -17,9 +17,7 @@ class PhoneBookService
 
     public const DATE_FORMAT = 'Y-m-d H:i:s';
 
-    /**
-     * @var Context
-     */
+
     private Context $context;
 
     /**

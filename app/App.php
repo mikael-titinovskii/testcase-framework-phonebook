@@ -27,9 +27,7 @@ class App
         'status_code' => 500,
         'reason_phrase' => 'Internal error, try again later or contact support',
     ];
-    /**
-     * @var Container
-     */
+
     private Container $container;
 
 
@@ -73,9 +71,9 @@ class App
             header('HTTP/1.1 500 Internal Server Error');
             header('Content-Type: application/json');
             echo \GuzzleHttp\json_encode(self::FATAL_ERROR_PAYLOAD);
+
             // fpm process needs to die this way
             fastcgi_finish_request();
-            // plan b
             exit(1);
         }
     }

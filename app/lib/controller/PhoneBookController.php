@@ -26,20 +26,12 @@ use ReflectionException;
 class PhoneBookController extends Controller
 {
     use MapperTrait;
-    /**
-     * @var PhoneBookService
-     */
+
     private PhoneBookService $phoneBookService;
-    /**
-     * @var PhoneEntryValidator
-     */
+
     private PhoneEntryValidator $phoneEntryValidator;
 
-    /**
-     * PhoneBookController constructor.
-     * @param PhoneBookService $phoneBookService
-     * @param PhoneEntryValidator $validator
-     */
+
     public function __construct(
         PhoneBookService $phoneBookService,
         PhoneEntryValidator $validator
@@ -142,15 +134,9 @@ class PhoneBookController extends Controller
     {
         $entries = $this->phoneBookService->getBySearchParams(
             new class($request) implements iSearchParams {
-                /**
-                 * @var ServerRequestInterface
-                 */
+
                 private ServerRequestInterface $request;
 
-                /**
-                 *  constructor.
-                 * @param ServerRequestInterface $request
-                 */
                 public function __construct(ServerRequestInterface $request)
                 {
                     $this->request = $request;

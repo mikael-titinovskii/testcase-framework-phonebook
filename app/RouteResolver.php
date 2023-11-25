@@ -11,9 +11,6 @@ use League\Route\Router;
 
 class RouteResolver
 {
-    /**
-     * @var Router
-     */
     private Router $router;
 
     /**

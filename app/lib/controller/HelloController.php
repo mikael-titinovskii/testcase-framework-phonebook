@@ -13,9 +13,6 @@ use Psr\Log\LoggerInterface;
  */
 class HelloController extends Controller
 {
-    /**
-     * @var LoggerInterface
-     */
     private LoggerInterface $logger;
 
     /**

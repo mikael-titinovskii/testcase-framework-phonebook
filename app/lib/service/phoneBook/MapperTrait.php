@@ -30,9 +30,7 @@ trait MapperTrait
 
         return new class($data) implements iPhoneEntry {
 
-            /**
-             * @var array
-             */
+
             private array $data;
 
             public function __construct(array $data)
@@ -157,9 +155,7 @@ trait MapperTrait
     {
         return new class($row) implements iPhoneEntry {
 
-            /**
-             * @var ActiveRow
-             */
+
             private ActiveRow $row;
 
             public function __construct(ActiveRow $row)

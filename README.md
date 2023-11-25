@@ -1,4 +1,18 @@
-#### phonebook api app
+### Phonebook api app
+
+this is a testcase, the task is to create a basic framework and a phonebook on top
+
+Framework features delegated to libs: 
+
+- caching
+- routing
+- request handling
+- db migrations
+- logs
+- DI container
+- dotenv variable loading
+- ORM
+
 
 ##### Setup:
 

@@ -17,9 +17,7 @@ class PhoneEntryValidator
     private const MSG_LAST_NAME = 'Invalid last name';
     private const MSG_TZ = 'Invalid timezone name';
     private const MSG_CC = 'Invalid country code';
-    /**
-     * @var ExternalValidationResourcesService
-     */
+
     private ExternalValidationResourcesService $externalValidationResourcesService;
 
     /**
