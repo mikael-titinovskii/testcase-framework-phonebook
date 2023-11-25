@@ -13,6 +13,9 @@ Framework features delegated to libs:
 - dotenv variable loading
 - ORM
 
+##### Requirements:
+
+Docker or PHP 7.*, composer, mysql 5.7
 
 ##### Setup:
 
